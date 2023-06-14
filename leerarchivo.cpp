@@ -4,60 +4,57 @@ Leer archivo de texto c++
 */
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <vector>
-#include <sstream> // para stringstream
 using namespace std;
-vector <string> separar (string linea);
 
-int main(int argc, char const *argv[]){
+vector<string> separar(string linea);
+
+int main()
+{
     ifstream entrada;
-    entrada.open( "DatosPeliculas.csv");
-    
+    entrada.open("DatosPeliculas.csv");
     string linea;
-    int numeroLinea =1;
-
-    while (getline(entrada,linea)){
-        // se haceun contador  Numerodelina ++ va recorriendo las lineas
-        // ++ operador de post incremento, primero usa el valor que tenga la variable y ya despues lo incrementa
-        //cout <<(numeroLinea++)<<endl; //no cerrar el archivo dentro del ciclo por que si no solo lee la primera linea
-        //cout<<"liz es una dramática";
-       
-        numeroLinea++;
+    int numerolinea = 1;
+    while (getline(entrada, linea))
+    {
+        // cout<<(numerolinea++) <<linea <<endl;
+        vector<string> datos = separar(linea);
         separar(linea);
-        if (numeroLinea ==5)
+        if (numerolinea != 1)
         {
-            break;
+            if (datos.size() == 6)
+            {
+                cout << numerolinea << "Pelicula: " << endl;
+            }
+            else
+            {
+                cout<< numerolinea << "Episodio: " << endl;
+            }
         }
-
+        numerolinea++;
     }
-
-    entrada.close ();
+    entrada.close();
     return 0;
 }
 
-vector <string> separar (string linea)
+vector<string> separar(string linea)
 {
-    vector <string> tokens;
-    stringstream entrada (linea); //flujo de datos a partir de una condicion
+    vector<string> tokens; // Componentes de la línea
+
+    stringstream entrada(linea); // Flujo de datos
     string dato;
-    int numeroTokens= 0;
-    while (getline(entrada, dato, ',')) 
+    int numeroTokens = 0;
+    while (getline(entrada, dato, ','))
     {
-    
-        if(dato != "" && dato != "/n" && dato != "\r")
+        if (dato != "" && dato != "\n" && dato != "\r")
         {
-            //cout << dato<< numeroTokens << endl;
-            tokens.push_back(dato); //Guarda en el vector
+            // cout<< dato <<endl;
+            tokens.push_back(dato); // Guarda el vector
             numeroTokens++;
         }
-        if( dato!= "")
-        {
-            cout<< dato<<numeroTokens<< endl;
-            numeroTokens ++;
-        }
-        
-
     }
+    // cout<< "Tokens: "<<numeroTokens <<endl <<endl;
+
     return tokens;
-    //cout << "tokens:" <<numeroTokens<< endl << endl;
 }

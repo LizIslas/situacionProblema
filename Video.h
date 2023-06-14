@@ -3,7 +3,8 @@ Definicion clase video
 */
 #ifndef VIDEO_H
 #define VIDEO_H
-#include "string"
+#include <string>
+using std ::string;
 class Video{
     private:
     
@@ -12,6 +13,8 @@ class Video{
     float Duracion;
     float Calificacion;
     string Fecha;
+    string Genero;
+
 
 
 };
