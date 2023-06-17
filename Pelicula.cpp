@@ -1,24 +1,40 @@
 #include "Pelicula.h"
+
 #include <iostream>
+#include <string>
 using namespace std;
 
-void Pelicula :: peliculaCali(float calificacion){
-    cout << "Las peliculas con la calificación " << calificacion << " son: " << endl;
+Pelicula :: Pelicula(){
 
 }
 
-void Pelicula :: epSerie(string serie){
+Pelicula :: Pelicula(float ID,string nombre,string genero,float calificacion,float duracion,
+string fecha):Video(ID,nombre,calificacion,duracion,fecha, genero){
+    this-> ID= ID;
+    this -> genero =genero;
+    this ->calificacion = calificacion;
+    this -> duracion= duracion;
+    this -> fecha= fecha;
 
 }
 
-void Pelicula::generoVid(string genero)
-{
+void Pelicula :: agregarPelicula(Pelicula* pelicula){
+    Peliculas.push_back(pelicula);
 }
 
-void Pelicula::videosCalif(float calificacion)
-{
+
+
+void Pelicula :: verVideoCalif(float calificacion){
+    }
+
+void Pelicula :: verVideoGenero(string genero){
+    
 }
 
-void Pelicula::calificarVid(string nombre, float calificacion)
-{
+void Pelicula :: verPeliculaCalif(float calificacion){
+    
+}
+
+void Pelicula :: verEp(string serie){
+
 }
