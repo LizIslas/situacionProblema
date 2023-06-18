@@ -1,10 +1,7 @@
 /* Creacion de superclase video
 Lizbeth Islas Becerril
 */
-/*
-Lizbeth Islas Becerril
-Creacion clase padre
-*/
+
 #ifndef VIDEO_H
 #define VIDEO_H
 #include <string>

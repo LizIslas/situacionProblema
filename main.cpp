@@ -1,3 +1,7 @@
+/*
+Lizbeth Islas
+Creacion main e implementacion
+*/
 #include <fstream>
 #include <sstream>
 #include <vector>

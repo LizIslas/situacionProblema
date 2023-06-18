@@ -1,4 +1,4 @@
-/* Creacion de superclase video
+/* Creacion de pelicula
 Lizbeth Islas Becerril
 */
 

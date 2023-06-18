@@ -1,3 +1,6 @@
+/*
+Creacion cpp de pelicula
+Lizbeth Islas Becerril*/
 #include "Pelicula.h"
 #include <iostream>
 using namespace std;
