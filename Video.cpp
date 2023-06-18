@@ -2,7 +2,7 @@
 Lizbeth Islas Becerril
 */
 #include "Video.h"
- #include <string>
+#include <string>
 #include <iostream>
 using namespace std;
 
@@ -10,7 +10,8 @@ Video :: Video(){
 
 }
 
-Video :: Video(float ID, string nombre, float calificacion, float duracion, string fecha, string genero){
+Video :: Video(string ID, string nombre, float calificacion, float duracion, 
+string fecha, string genero){
     this -> ID= ID;
     this -> calificacion= calificacion;
     this ->  duracion = duracion;
@@ -48,17 +49,6 @@ void Video:: verVideoGenero (string genero){
         cout << "No hay ese genero :(" << endl;
     }
 }
-void Video:: verPeliculaCalif (float calificacion){
-    cout << "Mostrar calificacione sde pelicula: "<< calificacion << endl;
-    if (calificacion= calificacion){
-        imprimir ();
-    }
-    else{
-        cout << "calificaion invalida" << endl;
-    }
-}
-void Video:: verEp (string serie){
-}
 
 void Video::imprimir(){
     cout <<"ID: "<< ID << endl;
@@ -67,4 +57,13 @@ void Video::imprimir(){
     cout << "Fecha: " << fecha << endl;
 
 
+}
+string Video :: getNombre(){
+    return nombre;
+}
+string Video ::getGenero(){
+    return genero;
+}
+float Video :: getCalificacion(){
+    return calificacion;
 }

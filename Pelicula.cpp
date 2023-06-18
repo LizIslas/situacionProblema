@@ -1,40 +1,24 @@
 #include "Pelicula.h"
-
 #include <iostream>
-#include <string>
 using namespace std;
 
-Pelicula :: Pelicula(){
-
+Pelicula::Pelicula()
+{
 }
 
-Pelicula :: Pelicula(float ID,string nombre,string genero,float calificacion,float duracion,
-string fecha):Video(ID,nombre,calificacion,duracion,fecha, genero){
-    this-> ID= ID;
-    this -> genero =genero;
-    this ->calificacion = calificacion;
-    this -> duracion= duracion;
-    this -> fecha= fecha;
-
+Pelicula::Pelicula(string ID, string nombre, string genero, 
+float calificacion, float duracion, string fecha): Video(ID, nombre, calificacion, duracion,
+fecha, genero)
+{
 }
 
-void Pelicula :: agregarPelicula(Pelicula* pelicula){
-    Peliculas.push_back(pelicula);
-}
-
-
-
-void Pelicula :: verVideoCalif(float calificacion){
-    }
-
-void Pelicula :: verVideoGenero(string genero){
-    
-}
-
-void Pelicula :: verPeliculaCalif(float calificacion){
-    
-}
-
-void Pelicula :: verEp(string serie){
-
+void Pelicula::imprimir()
+{
+    cout << "--- PELICULA---" <<endl <<endl;
+    cout<< " - Nombre: " <<nombre <<endl;
+    cout << " - Género: " <<genero <<endl;
+    cout << " - Duración: " <<duracion <<endl;
+    cout <<" - Calificación: "<< duracion <<endl;
+    cout << " - Fecha de estreno: " << fecha <<endl;
+    cout << "................" <<endl;
 }

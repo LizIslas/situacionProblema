@@ -13,7 +13,7 @@ using namespace std;
  class Video{
 
     protected:
-    float ID;
+    string ID;
     string nombre;
     float calificacion;
     float duracion;
@@ -22,14 +22,14 @@ using namespace std;
 
     public:
     Video ();
-    Video(float ID,string nombre, float calificacion, float duracion, string fecha, string genero);
-    virtual void calificar (float calificar, string titulo);
-    virtual void verEp(string serie);
-    virtual void verVideoCalif(float calificacion);        
-    virtual void verVideoGenero(string genero);
-    virtual void verPeliculaCalif(float calificacion);
+    Video(string ID,string nombre, float calificacion, float duracion, string fecha, string genero);
+     void calificar (float calificar, string titulo);
+     void verVideoCalif(float calificacion);        
+     void verVideoGenero(string genero);
     virtual void imprimir();
-
+    string getNombre();
+    string getGenero();
+    float getCalificacion();
 
  };
 

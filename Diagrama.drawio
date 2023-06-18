@@ -1,0 +1,59 @@
+<mxfile host="65bd71144e">
+    <diagram id="0hwx_mpJFcFCnCtMh5_W" name="Page-1">
+        <mxGraphModel dx="287" dy="433" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Video" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="40" width="320" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="-ID:string&#10;-nombre:string&#10;-calificacion:float&#10;-duracion: float&#10;-fecha : string&#10;-genero : string&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
+                    <mxGeometry y="26" width="320" height="94" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="2" vertex="1">
+                    <mxGeometry y="120" width="320" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="+Video()&#10;+Video( ID:string, nombre:string, calificacion:float, &#10;duracion:float, fecha: string, genero:string)&#10;+ calificar(calificar:float, titulo: string) :void&#10;+verVideoCalif (calificacion:float): void&#10;+verVideoGenero (genero:string): void&#10;+imprimir () : virtual void&#10;+getNombre():string&#10;+getGenero():string&#10;+getCalificacion():float&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
+                    <mxGeometry y="128" width="320" height="152" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Episodio" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="360" width="280" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="-temp:int&#10;-nombreSerie: string&#10;-IdSerie:string&#10;-numEpisodio: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="6" vertex="1">
+                    <mxGeometry y="26" width="280" height="74" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="6" vertex="1">
+                    <mxGeometry y="100" width="280" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Episodio()&#10;Episodio(IdSerie: string, generoSerie:string,&#10; nombreSerie:string,ID:string, nombre:string,&#10;calificacion:float, duracion:float, fecha: string, &#10;genero:string, temp: int, numEpisodio: int)&#10;imprimir () : void&#10;getNombreSerie (): string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="6" vertex="1">
+                    <mxGeometry y="108" width="280" height="122" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.393;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="5" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="100" y="330" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="120" y="240"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="Pelicula" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="590" y="330" width="210" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="13" vertex="1">
+                    <mxGeometry y="26" width="210" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="+Pelicula ()&#10;+Pelicula(ID:string, nombre:string, &#10;calificacion:float, duracion:float,&#10; fecha: string, genero:string)&#10;imprimir ():void&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="13" vertex="1">
+                    <mxGeometry y="34" width="210" height="96" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" style="edgeStyle=none;html=1;entryX=0.416;entryY=0.013;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="5" target="13" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="780" y="240" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="680" y="240"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

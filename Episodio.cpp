@@ -10,42 +10,27 @@ Episodio :: Episodio(){
 
 }
 
-Episodio :: Episodio(float ID, string nombre, string genero, float calificacion, float duracion,
+Episodio :: Episodio(string IdSerie, string nombreSerie, string generoSerie,string ID, string nombre, string genero, float calificacion, float duracion,
 string fecha,int temp,int numEpisodio):Video(ID,nombre,calificacion,duracion,fecha, genero){
     this -> nombre=nombre;
     this -> temp = temp;
     this -> numEpisodio = numEpisodio;
 }
 
-void Episodio :: calificar(float calificar, string titulo){
-    for(int i=0;i<Series.size();i++){
-        Series[i] -> calificar(calificar,titulo);
-    }
-
+void Episodio::imprimir()
+{
+    cout << "--- SERIE---" <<endl <<endl;
+    cout<< " - Nombre de la serie: " <<nombreSerie <<endl;
+    cout << " - Nombre del episodio: " <<nombre <<endl;
+    cout << " - Episodio: " <<numEpisodio <<endl;
+    cout << " - Temporada: " <<temp <<endl;
+    cout << " - Género: " <<genero <<endl;
+    cout << " - Duración: " <<duracion <<endl;
+    cout <<" - Calificación: "<< duracion <<endl;
+    cout << " - Fecha de estreno: " << fecha <<endl;
+    cout << "................" <<endl;
 }
-
-void Episodio :: verVideoCalif(float calificacion){
-    for(int i=0;i<Series.size();i++){
-        Series[i] -> verVideoCalif(calificacion);
-    }
-}
-
-void Episodio :: verVideoGenero(string genero){
-    for(int i=0;i<Series.size();i++){
-        Series[i] -> verVideoGenero(genero);
-    }
-}
-
-void Episodio :: verPeliculaCalif(float calificacion){
-    for(int i=0;i<Series.size();i++){
-        Episodio *ap = dynamic_cast <Episodio*> (Series[i]);
-        if(ap !=0){
-            ap -> verPeliculaCalif(calificacion);                                                                                                                                                            
-        }
-        
-    }
-}
-
-void Episodio :: verEp(string serie){
-
+string Episodio::getNombreSerie (){
+    return nombreSerie;
+    
 }
