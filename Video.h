@@ -23,9 +23,9 @@ using namespace std;
     public:
     Video ();
     Video(string ID,string nombre, float calificacion, float duracion, string fecha, string genero);
-     void calificar (float calificar, string titulo);
-     void verVideoCalif(float calificacion);        
-     void verVideoGenero(string genero);
+   void calificar (float calificar, string titulo);
+   void verVideoCalif(float calificacion);        
+   void verVideoGenero(string genero);
     virtual void imprimir();
     string getNombre();
     string getGenero();

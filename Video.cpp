@@ -14,7 +14,7 @@ Video :: Video(string ID, string nombre, float calificacion, float duracion,
 string fecha, string genero){
     this -> ID= ID;
     this -> calificacion= calificacion;
-    this ->  duracion = duracion;
+    this -> duracion = duracion;
     this -> fecha= fecha;
     this -> genero = genero;
     this -> nombre = nombre;
@@ -51,6 +51,7 @@ void Video:: verVideoGenero (string genero){
 }
 
 void Video::imprimir(){
+    cout <<"Nombre: "<<nombre <<endl;
     cout <<"ID: "<< ID << endl;
     cout <<"Calificacion: " << calificacion << endl;
     cout << "DUracion :" <<duracion << endl;
